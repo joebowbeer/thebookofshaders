@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: sudo apt update
+    - run: sudo apt install -y git-core glslviewer
+    - run: sudo apt install -y texlive-xetex pandoc python2.7
+    - run: make clean pdf
