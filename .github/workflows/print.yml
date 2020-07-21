@@ -12,3 +12,4 @@ jobs:
     - run: eval "$(/usr/libexec/path_helper)"
     - run: brew install pandoc python@2
     - run: make clean pdf
+    - run: ls -al
